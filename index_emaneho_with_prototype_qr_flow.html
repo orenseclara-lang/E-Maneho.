@@ -1,0 +1,1108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Maneho | Move Freely</title>
+
+<style>
+[hidden] {
+  display: none !important;
+}
+
+.terms-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 45px 8% 70px;
+}
+
+.terms-page h1 {
+  font-size: 36px;
+  margin: 25px 0 15px;
+  color: #183c2b;
+}
+
+.terms-intro {
+  color: #607568;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.terms-content h3 {
+  font-size: 18px;
+  margin: 25px 0 8px;
+}
+
+.terms-content p {
+  color: #607568;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  color: #178447;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 30px 0 20px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.agreement input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: #178447;
+  flex-shrink: 0;
+}
+
+.continue-btn:disabled {
+  background: #a8b7ad;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.terms-message {
+  margin-top: 20px;
+  color: #178447;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .terms-page {
+    padding: 35px 6% 50px;
+  }
+
+  .terms-page h1 {
+    font-size: 30px;
+  }
+}
+
+    
+    body {
+      background: #f7faf7;
+      color: #183c2b;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      background: white;
+      box-shadow: 0 2px 12px #0000000d;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #178447;
+    }
+
+    .logo span {
+      color: #183c2b;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #183c2b;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #178447;
+    }
+
+    /* WELCOME SECTION */
+    .hero {
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+      padding: 70px 8%;
+      background: linear-gradient(120deg, #e4f5e9, #f7faf7);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #d2efdc;
+      color: #17733d;
+      padding: 9px 16px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #178447;
+    }
+
+    .hero-text p {
+      color: #607568;
+      line-height: 1.8;
+      max-width: 490px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      background: #178447;
+      color: white;
+      padding: 15px 27px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .primary-btn:hover {
+      background: #106333;
+      transform: translateY(-2px);
+    }
+
+    .value-proposition {
+      margin: 0 0 28px;
+      padding: 16px 18px;
+      max-width: 510px;
+      background: #ffffff;
+      border: 1px solid #cfe8d6;
+      border-left: 5px solid #178447;
+      border-radius: 12px;
+      color: #315b40;
+      line-height: 1.6;
+      box-shadow: 0 6px 18px #183c2b0a;
+    }
+
+    .value-proposition strong {
+      display: block;
+      color: #176b39;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .emergency-btn {
+      display: block;
+      width: 100%;
+      margin: 30 auto 15px;
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 8px;
+      background: #b42318;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .emergency-btn:hover {
+      background: #8f1c13;
+    }
+
+    .emergency-note {
+      display: none;
+      margin: 0 0 18px !important;
+      padding: 15px 12px;
+      min-height: 0 !important;
+      border-radius: 8px;
+      background: #fff1f0;
+      color: #842018 !important;
+      font-size: 12px !important;
+      line-height: 1.55 !important;
+      text-align: left;
+    }
+
+    .emergency-note.visible {
+      display: block;
+    }
+
+    .hero-art {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 360px;
+      background: #e0f1e4;
+      border-radius: 28px;
+      padding: 20px;
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    /* VEHICLES */
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: #718076;
+      line-height: 1.7;
+    }
+
+    .vehicles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .vehicle-card {
+      background: white;
+      border: 1px solid #e5eee7;
+      padding: 30px 22px;
+      border-radius: 18px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px #183c2b12;
+    }
+
+    .vehicle-icon {
+      font-size: 60px;
+      margin-bottom: 18px;
+    }
+
+    .vehicle-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .vehicle-card p {
+      color: #718076;
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 72px;
+      margin-bottom: 20px;
+    }
+
+    .vehicle-card .primary-btn {
+      width: 100%;
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works {
+      background: #edf7ef;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .step-number {
+      background: #178447;
+      color: white;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .steps h3 {
+      margin-bottom: 10px;
+    }
+
+    .steps p {
+      color: #718076;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* CALL TO ACTION */
+    .cta {
+      text-align: center;
+      background: #183c2b;
+      color: white;
+      padding: 65px 8%;
+    }
+
+    .cta h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #d3e4d8;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: white;
+      color: #718076;
+      font-size: 13px;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 760px) {
+      header { padding: 14px 5%; flex-wrap: wrap; gap: 15px; }
+      .brand img { width: 45px; height: 45px; }
+      .logo { font-size: 23px; }
+      nav { gap: 15px; flex-wrap: wrap; }
+      nav a { font-size: 12px; }
+      .hero { flex-direction: column; padding: 55px 6%; }
+      .hero-art { width: 100%; min-height: 280px; }
+      .hero-logo { max-width: 280px; }
+      .vehicles, .steps { grid-template-columns: 1fr; }
+      section { padding: 55px 6%; }
+    }
+
+    /* USER VERIFICATION */
+    .verification-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 8% 70px;
+    }
+    .verification-page .section-heading { margin-top: 30px; }
+    .verification-page .section-heading h1 {
+      margin: 18px 0;
+      font-size: 36px;
+    }
+    #verification-form { margin-top: 35px; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+    .form-group label { font-weight: bold; color: #183c2b; }
+    .form-group input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cbd9ce;
+      border-radius: 8px;
+      background: white;
+      color: #183c2b;
+      font-size: 15px;
+    }
+    .form-group input:focus { outline: 2px solid #178447; border-color: #178447; }
+    .form-group small { color: #607568; line-height: 1.6; }
+    .image-preview {
+      width: 180px;
+      max-height: 220px;
+      object-fit: contain;
+      margin-top: 10px;
+      border: 1px solid #dce8de;
+      border-radius: 10px;
+    }
+    .privacy-notice {
+      background: #edf7ef;
+      padding: 18px;
+      border-radius: 10px;
+      margin: 28px 0 20px;
+      line-height: 1.7;
+    }
+    .privacy-notice p { margin-top: 8px; font-size: 14px; color: #52695a; }
+    #verification-message { margin-top: 20px; line-height: 1.7; color: #178447; }
+    #verification-message.error { color: #b42318; }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .secondary-btn {
+      display: inline-block;
+      background: white;
+      color: #178447;
+      padding: 14px 22px;
+      border: 1px solid #178447;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .verification-page { padding: 30px 6% 50px; }
+      .verification-page .section-heading h1 { font-size: 30px; }
+    }
+  
+.workflow-panel{max-width:820px;margin:30px auto;padding:30px;background:#fff;border:1px solid #e2ece4;border-radius:18px;box-shadow:0 10px 28px #183c2b0d}
+.verification-status{text-align:center;padding:38px 22px;margin-top:28px;background:#edf7ef;border-radius:16px}
+.verification-spinner{width:58px;height:58px;margin:0 auto 22px;border:6px solid #cfe5d5;border-top-color:#178447;border-radius:50%;animation:maneho-spin .9s linear infinite}
+@keyframes maneho-spin{to{transform:rotate(360deg)}}
+.verification-check{width:66px;height:66px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;border-radius:50%;background:#178447;color:white;font-size:38px;animation:maneho-pop .45s ease-out}
+@keyframes maneho-pop{0%{transform:scale(.5);opacity:0}75%{transform:scale(1.12);opacity:1}100%{transform:scale(1);}}
+.payment-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:25px 0}
+.payment-option{min-height:105px;border:2px solid #dce8de;border-radius:12px;background:white;color:#183c2b;cursor:pointer;font-size:17px;font-weight:bold;padding:18px;transition:.2s}
+.payment-option:hover,.payment-option.selected{border-color:#178447;background:#edf7ef;transform:translateY(-2px)}
+.payment-logo{display:block;font-size:26px;font-weight:800;margin-bottom:8px}
+.guide-list{line-height:1.8;color:#52695a;padding-left:22px}
+.agreement-box{background:#edf7ef;border-radius:12px;padding:20px;margin:25px 0;line-height:1.75}
+.agreement-box label{display:flex;gap:12px;align-items:flex-start;margin-top:18px;font-weight:600;cursor:pointer}
+.agreement-box input{margin-top:5px;accent-color:#178447}
+@media(max-width:600px){.payment-options{grid-template-columns:1fr}.workflow-panel{padding:22px 17px}}
+
+</style>
+</head>
+
+<body>
+
+  <!-- WELCOME PAGE -->
+  <header>
+    <div class="brand">
+      <img src="e-maneho-logo.png" alt="E-Maneho Logo">
+      <div class="logo">E-<span>Maneho</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FRONT PAGE -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="tag">E-LEARN, E-DRIVE!</div>
+
+        <h1>
+          Your Journey,<br>
+          <span>Your Way.</span>
+        </h1>
+
+        <p>
+          Explore more with E-Maneho! Rent electric scooters,
+          e-bikes, and e-cars for a convenient, affordable,
+          and eco-friendly way to travel.
+        </p>
+
+        <div class="value-proposition">
+          <strong>Affordable rides from ₱80–₱150</strong>
+          Enjoy trips within a 3km-10 km range, with the rental rate depending
+          on your selected vehicle and travel distance.
+        </div>
+
+        <button class="primary-btn" onclick="showTerms()">
+          Get Started →
+        </button>
+      </div>
+
+      <div class="hero-art">
+        <img
+          src="e-maneho-logo.png"
+          alt="E-Maneho Electric Mobility Logo"
+          class="hero-logo"
+        >
+      </div>
+    </section>
+
+    <!-- TERMS AND CONDITIONS PAGE -->
+    <section id="terms-page" class="terms-page" hidden>
+      <button class="back-btn" onclick="showHome()">
+        ← Back
+      </button>
+
+      <h1>Terms and Conditions</h1>
+
+      <p class="terms-intro">
+        Welcome to E-Maneho. Please read the following terms
+        and conditions before using our electric vehicle rental
+        service.
+      </p>
+
+      <div class="terms-content">
+        <h3>1. Eligibility</h3>
+        <p>
+          Users must meet the applicable age, identification,
+          and driving or riding requirements for their selected
+          electric vehicle.
+        </p>
+
+        <h3>2. Account and Information</h3>
+        <p>
+          Users must provide accurate information when registering
+          and keep their account credentials secure.
+        </p>
+
+        <h3>3. Vehicle Rental and Use</h3>
+        <p>
+          Vehicles must be used responsibly and only in accordance
+          with applicable traffic laws, safety rules, and rental
+          instructions.
+        </p>
+
+        <h3>4. Payments and Rental Fees</h3>
+        <p>
+          Users must review the rental price, rental period, and
+          applicable fees before confirming a booking. Available
+          payment methods will be shown during checkout.
+        </p>
+
+        <h3>5. Safety and Vehicle Condition</h3>
+        <p>
+          Users should inspect their vehicle before use, follow
+          safety instructions, and report damage or mechanical
+          problems promptly.
+        </p>
+
+        <h3>6. Damage, Loss, and Responsibility</h3>
+        <p>
+          Users may be responsible for damage, loss, or misuse
+          in accordance with the applicable rental agreement
+          and relevant law.
+        </p>
+
+        <h3>7. Privacy</h3>
+        <p>
+          Personal information will be handled according to
+          E-Maneho's applicable Privacy Policy and relevant
+          data protection laws.
+        </p>
+
+        <h3>8. Cancellations and Refunds</h3>
+        <p>
+          Any applicable cancellation, rescheduling, and refund
+          rules should be reviewed before confirming a booking.
+        </p>
+      </div>
+
+      <label class="agreement">
+        <input type="checkbox" id="agreeTerms">
+        <span>
+          I have read and agree to the Terms and Conditions.
+        </span>
+      </label>
+
+      <button
+        class="primary-btn continue-btn"
+        id="continueBtn"
+        onclick="continueToBooking()"
+        disabled
+      >
+        Agree and Continue →
+      </button>
+
+      <p id="terms-message" class="terms-message" aria-live="polite"></p>
+    </section>
+    
+<!-- CHOOSE YOUR E-VEHICLE PAGE -->
+<section id="vehicles-page" class="vehicles-page" hidden>
+
+  <button class="back-btn" onclick="backToTerms()">
+    ← Back to Terms and Conditions
+  </button>
+
+  <div class="section-heading">
+    <div class="tag">YOUR JOURNEY STARTS HERE</div>
+    <h1>Choose Your Ride</h1>
+    <p>
+      Select the electric vehicle that best fits your
+      travel needs and destination.
+    </p>
+  </div>
+
+  <div class="vehicles">
+
+    <div class="vehicle-card">
+      <div class="vehicle-icon">🛵</div>
+     
+
+      <h3>E-Scooter</h3>
+      <p>
+        Ideal for short trips, quick errands, and exploring
+        nearby destinations.
+      </p>
+        <button class="primary-btn"
+        onclick="selectVehicle('E-Scooter')">
+        Choose E-Scooter
+      </button>
+
+       <button class="emergency-btn" type="button" onclick="toggleEmergencyInfo('scooter-emergency')">🚨 Emergency Button</button>
+      <p class="emergency-note" id="scooter-emergency">Press this only if an unexpected situation occurs, such as vehicle malfunction, an accident, or another safety-related emergency. Use it only when assistance is needed.</p>
+    </div>
+
+    <div class="vehicle-card">
+      <div class="vehicle-icon">🚲</div>
+      
+      <h3>E-Bike/E-Trike</h3>
+      <p>
+        Enjoy convenient electric-powered rides for
+        commuting and sightseeing.
+      </p>
+      <button class="primary-btn"
+        onclick="selectVehicle('E-Bike')">
+        Choose E-Bike/E-Trike
+      </button>
+
+       <button class="emergency-btn" type="button" onclick="toggleEmergencyInfo('ebike-emergency')">🚨 Emergency Button</button>
+      <p class="emergency-note" id="ebike-emergency">Press this only if an unexpected situation occurs, such as vehicle malfunction, an accident, or another safety-related emergency. Use it only when assistance is needed.</p>
+    </div>
+
+    <div class="vehicle-card">
+      <div class="vehicle-icon">🚗</div>
+      
+      <h3>E-Car</h3>
+      <p>
+        Travel with greater comfort on longer trips
+        and journeys with companions.
+      </p>
+      <button class="primary-btn"
+        onclick="selectVehicle('E-Car')">
+        Choose E-Car
+      </button>
+
+      <button class="emergency-btn" type="button" onclick="toggleEmergencyInfo('ecar-emergency')">🚨 Emergency Button</button>
+      <p class="emergency-note" id="ecar-emergency">Press this only if an unexpected situation occurs, such as vehicle malfunction, an accident, or another safety-related emergency. Use it only when assistance is needed.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- USER VERIFICATION PAGE -->
+<section id="verification-page" class="verification-page" hidden>
+
+  <button class="back-btn" type="button" onclick="backToVehicles()">
+    ← Back to Vehicle Selection
+  </button>
+
+  <div class="section-heading">
+    <div class="tag">CUSTOMER VERIFICATION</div>
+    <h1>Verify Your Identity</h1>
+    <p>
+      You selected <strong id="verification-vehicle">E-Scooter</strong>.
+      Please provide your information to continue with E-Maneho.
+    </p>
+  </div>
+
+  <form id="verification-form">
+
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        placeholder="Enter your full name"
+        autocomplete="name"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="18"
+        max="120"
+        placeholder="Enter your age"
+        required
+      >
+      <small>For this prototype, customers must be at least 18.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="residence">Where Are You From?</label>
+      <input
+        type="text"
+        id="residence"
+        name="residence"
+        placeholder="City/Municipality and Province"
+        autocomplete="address-level2"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="selfie">Your Personal Photo / Selfie</label>
+      <input
+        type="file"
+        id="selfie"
+        name="selfie"
+        accept="image/jpeg,image/png,image/webp"
+        required
+      >
+      <small>Upload a clear photo of yourself (JPG, PNG, or WebP).</small>
+      <img id="selfie-preview" class="image-preview"
+        alt="Your selfie preview" hidden>
+    </div>
+
+    <div class="form-group">
+      <label for="validId">Photo of a Valid ID</label>
+      <input
+        type="file"
+        id="validId"
+        name="validId"
+        accept="image/jpeg,image/png,image/webp"
+        required
+      >
+      <small>
+        Upload an accepted ID showing the required identification details.
+        Do not upload an ID belonging to another person.
+      </small>
+      <img id="id-preview" class="image-preview"
+        alt="Your ID preview" hidden>
+    </div>
+
+    <div class="privacy-notice">
+      <strong>Privacy Notice</strong>
+      <p>
+        E-Maneho values your privacy and is committed to protecting your personal information in accordance with the Data Privacy Act of 2012 (Republic Act No. 10173).
+      The personal information collected through this website, will be used solely for customer verification, rental transactions, and vehicle security purposes.
+      </p>
+    </div>
+
+    <label class="agreement">
+      <input type="checkbox" id="privacyConsent" required>
+      <span>
+        I have read the privacy notice and consent to the collection
+        and processing of my information for identity verification.
+      </span>
+    </label>
+
+    <button type="submit" class="primary-btn continue-btn">
+      Submit Verification →
+    </button>
+
+    <p id="verification-message" aria-live="polite"></p>
+
+  </form>
+
+  
+<div id="verification-progress" class="verification-status" role="status" aria-live="polite" hidden>
+  <div class="verification-spinner" aria-hidden="true"></div>
+  <h1 style="font-size:30px;margin-bottom:12px;">We're Verifying Your Information</h1>
+  <p>Please wait while we complete the verification process.</p>
+</div>
+<div id="booking-success" class="workflow-panel" role="status" aria-live="polite" hidden>
+  <div class="verification-check" aria-hidden="true">✓</div>
+  <h1 style="font-size:32px;text-align:center;">Verification Complete!</h1>
+  <p style="text-align:center;">Your information has passed the prototype's form checks.</p>
+  <p style="text-align:center;">Selected vehicle: <strong id="success-vehicle"></strong></p>
+  <div id="payment-stage">
+    <h2 style="text-align:center;margin-top:30px;">Choose Your Payment Method</h2>
+    <p style="text-align:center;color:#607568;">Select your preferred e-wallet to continue.</p>
+    <div class="payment-options">
+      <button type="button" class="payment-option" onclick="choosePayment('GCash',this)"><span class="payment-logo" style="color:#0876d1;">GCash</span>E-wallet</button>
+      <button type="button" class="payment-option" onclick="choosePayment('Maya',this)"><span class="payment-logo" style="color:#00a86b;">maya</span>E-wallet</button>
+    </div>
+    <p id="payment-message" aria-live="polite">Choose GCash or Maya (formerly PayMaya).</p>
+    <button type="button" class="primary-btn" id="continue-payment" onclick="continueToGuide()" disabled>Continue →
+    </button>
+
+<div id="prototype-qr" style="display: none; text-align: center; margin-top: 25px;">
+
+    <h2>Prototype Payment Notice</h2>
+
+    <p>
+      Scan this QR code to view our payment notice.
+    </p>
+
+    <img
+      src="e-maneho-prototype-notice-qr.png"
+      alt="E-Maneho Prototype Notice QR Code"
+      style="width: 220px; height: 220px;"
+    >
+
+    <p>
+      This is only a prototype. No actual payment
+      has been made or processed.
+    </p>
+
+</div>
+
+  </div>
+  <div id="vehicle-guide-stage" hidden>
+    <h2 style="margin-top:28px;">How to Use Your <span id="guide-vehicle"></span></h2>
+    <p style="color:#607568;">Review these basic operating and safety reminders before using your vehicle.</p>
+    <div id="guide-content"></div>
+    <div class="agreement-box">
+      <strong>Rental and Vehicle Responsibility Agreement</strong>
+      <p>By proceeding, I agree that:</p>
+      <ul class="guide-list">
+        <li>I will operate the vehicle responsibly and follow traffic laws, safety instructions, and the rental rules.</li>
+        <li>I will inspect the vehicle before use and report existing damage, defects, or safety concerns.</li>
+        <li>I will take reasonable care of the vehicle and will not lend it to an unauthorized person.</li>
+        <li>I may be responsible, subject to the rental agreement and applicable law, for damage, loss, or theft caused by my negligence, misuse, or violation of the agreed terms.</li>
+        <li>I understand that E-Maneho does not provide insurance coverage for its rental vehicles or customers, and I acknowledge the risks associated with using the service.</li>
+        <li>I will return the vehicle at the agreed time and location and report any incident immediately.</li>
+      </ul>
+      <label><input type="checkbox" id="rentalAgreement"><span>I have read, understood, and agree to the operating instructions and rental responsibilities above.</span></label>
+    </div>
+    <button type="button" class="primary-btn" id="final-book-button" onclick="completeBooking()" disabled>Agree and Book Now</button>
+  </div>
+  <div id="final-booking-stage" hidden style="text-align:center;padding:25px 5px;">
+    <div class="verification-check" aria-hidden="true">✓</div>
+    <h1 style="font-size:32px;">Booking Successful!</h1>
+    <p>Your <strong id="final-vehicle"></strong> booking request has been completed.</p>
+    <p>Payment method selected: <strong id="final-payment"></strong></p>
+    <p style="color:#607568;font-size:13px;margin-top:14px;">Prototype only: no actual payment, identity verification, or reservation has been processed.</p>
+    <button type="button" class="primary-btn" onclick="returnToHome()">Back to Home</button>
+  </div>
+</div>
+</section>
+
+  </main>
+
+  <footer id="footer">
+    © 2026 E-Maneho. Move Freely. Travel Sustainably.
+  </footer>
+
+  <script>
+    function toggleEmergencyInfo(id) {
+      const note = document.getElementById(id);
+      if (note) {
+        note.classList.toggle("visible");
+      }
+    }
+
+
+    let selectedVehicle = "";
+
+    function showTerms() {
+      document.getElementById("home").hidden = true;
+      document.getElementById("terms-page").hidden = false;
+      document.getElementById("vehicles-page").hidden = true;
+      document.getElementById("verification-page").hidden = true;
+      document.getElementById("footer").hidden = true;
+      window.scrollTo(0, 0);
+    }
+
+    function showHome() {
+      document.getElementById("terms-page").hidden = true;
+      document.getElementById("home").hidden = false;
+      document.getElementById("vehicles-page").hidden = true;
+      document.getElementById("verification-page").hidden = true;
+      document.getElementById("footer").hidden = false;
+      window.scrollTo(0, 0);
+    }
+
+    const agreeCheckbox = document.getElementById("agreeTerms");
+    const continueBtn = document.getElementById("continueBtn");
+    agreeCheckbox.addEventListener("change", function () {
+      continueBtn.disabled = !agreeCheckbox.checked;
+    });
+
+    function continueToBooking() {
+      if (!agreeCheckbox.checked) return;
+      document.getElementById("terms-page").hidden = true;
+      document.getElementById("vehicles-page").hidden = false;
+      document.getElementById("verification-page").hidden = true;
+      document.getElementById("footer").hidden = true;
+      window.scrollTo(0, 0);
+    }
+
+    function backToTerms() {
+      document.getElementById("vehicles-page").hidden = true;
+      document.getElementById("terms-page").hidden = false;
+      window.scrollTo(0, 0);
+    }
+
+    function backToVehicles() {
+      document.getElementById("verification-page").hidden = true;
+      document.getElementById("vehicles-page").hidden = false;
+      document.getElementById("footer").hidden = true;
+      window.scrollTo(0, 0);
+    }
+
+    function selectVehicle(vehicle) {
+      selectedVehicle = vehicle;
+      document.getElementById("vehicles-page").hidden = true;
+      document.getElementById("verification-page").hidden = false;
+      document.getElementById("verification-vehicle").textContent = vehicle;
+      document.getElementById("footer").hidden = true;
+      window.scrollTo(0, 0);
+    }
+
+    function previewImage(inputId, previewId) {
+      const input = document.getElementById(inputId);
+      const preview = document.getElementById(previewId);
+
+      input.addEventListener("change", function () {
+        const file = input.files[0];
+        preview.hidden = true;
+        preview.removeAttribute("src");
+        if (!file) return;
+
+        const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+        if (!allowedTypes.includes(file.type)) {
+          alert("Please select a JPG, PNG, or WebP image.");
+          input.value = "";
+          return;
+        }
+        if (file.size > 5 * 1024 * 1024) {
+          alert("Please select an image smaller than 5 MB.");
+          input.value = "";
+          return;
+        }
+        preview.src = URL.createObjectURL(file);
+        preview.hidden = false;
+      });
+    }
+
+    previewImage("selfie", "selfie-preview");
+    previewImage("validId", "id-preview");
+
+    
+let selectedPayment = "";
+
+document.getElementById("verification-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const age = Number(document.getElementById("age").value);
+  const selfie = document.getElementById("selfie").files[0];
+  const validId = document.getElementById("validId").files[0];
+  const message = document.getElementById("verification-message");
+  message.classList.remove("error");
+  if (age < 18 || age > 120) { message.textContent = "Please enter a valid age of 18 or above."; message.classList.add("error"); return; }
+  if (!selfie || !validId) { message.textContent = "Please upload both your personal photo and valid ID."; message.classList.add("error"); return; }
+  if (!document.getElementById("privacyConsent").checked) { message.textContent = "Please review and agree to the privacy notice."; message.classList.add("error"); return; }
+
+  document.getElementById("verification-form").hidden = true;
+  document.querySelector("#verification-page .section-heading").hidden = true;
+  document.getElementById("verification-progress").hidden = false;
+  document.getElementById("booking-success").hidden = true;
+  document.getElementById("success-vehicle").textContent = selectedVehicle;
+  window.scrollTo(0,0);
+  window.setTimeout(function() {
+    document.getElementById("verification-progress").hidden = true;
+    document.getElementById("booking-success").hidden = false;
+    window.scrollTo(0,0);
+  }, 5000);
+});
+
+function choosePayment(method, button) {
+  selectedPayment = method;
+  document.querySelectorAll(".payment-option").forEach(function(option) { option.classList.remove("selected"); });
+  button.classList.add("selected");
+  document.getElementById("payment-message").textContent = method + " selected.";
+  document.getElementById("continue-payment").disabled = false;
+}
+
+function continueToGuide() {
+  if (!selectedPayment) return;
+
+  // First click: reveal the prototype QR notice without leaving the payment stage.
+  const prototypeQR = document.getElementById("prototype-qr");
+  const continueButton = document.getElementById("continue-payment");
+
+  if (prototypeQR.style.display === "none" || prototypeQR.style.display === "") {
+    prototypeQR.style.display = "block";
+    document.getElementById("payment-message").textContent =
+      selectedPayment + " selected. Scan the QR code to read the prototype payment notice. No payment will be processed.";
+    continueButton.textContent = "Continue to Vehicle Instructions →";
+    window.scrollTo(0, document.body.scrollHeight);
+    return;
+  }
+
+  // Second click: proceed to the existing vehicle instructions and agreement.
+  document.getElementById("payment-stage").hidden = true;
+  document.getElementById("vehicle-guide-stage").hidden = false;
+  document.getElementById("guide-vehicle").textContent = selectedVehicle;
+  const guides = {
+    "E-Scooter": ["Wear a properly fitted helmet and protective gear.", "Check brakes, tires, lights, battery level, and controls before riding.", "Start slowly, keep both hands on the handlebars, and maintain a safe speed.", "Use permitted routes, obey traffic rules, and do not carry unauthorized passengers.", "Park in the approved area and switch off or secure the scooter."],
+    "E-Bike": ["Wear a properly fitted helmet and adjust the seat and controls.", "Check brakes, tires, lights, battery level, and pedal-assist or throttle controls.", "Start with a low assist setting and signal before turning.", "Follow traffic rules and do not overload the bike or carry unauthorized passengers.", "Park in the approved area, switch off the bike, and secure it."],
+    "E-Car": ["Only an authorized, properly licensed driver may operate the vehicle.", "Adjust the seat and mirrors and ensure all passengers wear seat belts.", "Check tires, lights, brakes, battery range, and dashboard warnings.", "Follow traffic laws, observe speed limits, avoid distractions, and never drive under the influence.", "Park in an authorized space, switch off the vehicle, and return the keys as instructed."]
+  };
+  document.getElementById("guide-content").innerHTML = "<ul class='guide-list'>" + (guides[selectedVehicle] || []).map(function(item) { return "<li>" + item + "</li>"; }).join("") + "</ul>";
+  document.getElementById("rentalAgreement").checked = false;
+  document.getElementById("final-book-button").disabled = true;
+  window.scrollTo(0,0);
+}
+
+document.getElementById("rentalAgreement").addEventListener("change", function() {
+  document.getElementById("final-book-button").disabled = !this.checked;
+});
+
+function completeBooking() {
+  if (!document.getElementById("rentalAgreement").checked) return;
+  document.getElementById("vehicle-guide-stage").hidden = true;
+  document.getElementById("final-booking-stage").hidden = false;
+  document.getElementById("final-vehicle").textContent = selectedVehicle;
+  document.getElementById("final-payment").textContent = selectedPayment;
+  window.scrollTo(0,0);
+}
+
+function returnToHome() {
+  document.getElementById("booking-success").hidden = true;
+  document.getElementById("verification-progress").hidden = true;
+  document.getElementById("verification-form").hidden = false;
+  document.querySelector("#verification-page .section-heading").hidden = false;
+  document.getElementById("verification-page").hidden = true;
+  document.getElementById("home").hidden = false;
+  document.getElementById("footer").hidden = false;
+  document.getElementById("verification-form").reset();
+  document.getElementById("selfie-preview").hidden = true;
+  document.getElementById("id-preview").hidden = true;
+  document.getElementById("payment-stage").hidden = false;
+  document.getElementById("vehicle-guide-stage").hidden = true;
+  document.getElementById("final-booking-stage").hidden = true;
+  document.getElementById("continue-payment").disabled = true;
+  document.getElementById("continue-payment").textContent = "Continue →";
+  document.getElementById("prototype-qr").style.display = "none";
+  document.getElementById("final-book-button").disabled = true;
+  document.querySelectorAll(".payment-option").forEach(function(option) { option.classList.remove("selected"); });
+  selectedVehicle = "";
+  selectedPayment = "";
+  window.scrollTo(0,0);
+}
+  </script>
+
+</body>
